@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Love You</title>
+    <link rel="shortcut icon" href="./icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <button id="triggerButton" style="display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1200;
+    width: 100%;
+    position: absolute;
+    background: none;
+    color: white;
+    border: none;
+    font-size: 24px;
+    margin-top: 20px">Please click anywhere to see special thing ^^</button>
+    <div id="drag-container"> 
+      <audio id="audio" loop src="./music2.mp3"></audio>
+        <div id="spin-container">
+          <img src="./img/img1.jpeg" alt="">
+          <img src="./img/img2.jpeg" alt="">
+          <img src="./img/img3.jpeg" alt="">
+          <img src="./img/img4.jpeg" alt="">
+          <img src="./img/img5.jpeg" alt="">
+          <img src="./img/img6.jpeg" alt="">
+          <img src="./img/img7.jpeg" alt="">
+          <img src="./img/img8.jpeg" alt="">
+          
+            <p>Trang...</p>
+          
+        
+        </div>
+        <div id="ground"></div>
+      </div>
+      
+      <div id="music-container"></div>
+      <div id="canva">
+      <canvas id="canvas"></canvas>
+    </div>
+    <script src="main.js"></script>
+    <script>
+      document.addEventListener('click', function() {
+        let audio = document.getElementById('audio');
+        audio.play().then(() => {
+            console.log('Audio is playing');
+        }).catch(error => {
+            console.error('Failed to play audio:', error);
+        });
+      });
+    </script>
+</body>
+</html>
